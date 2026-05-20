@@ -1,0 +1,82 @@
+
+@import "tailwindcss";
+*{
+  transition: all 0.3s ease-in-out;
+}
+
+@theme{
+  --color-primary: #4f46e5;
+  --color-secondary: #fbbf24;
+  --color-background: #f3f4f6;
+  --color-text: #111827;
+
+}
+
+body{
+    --dot-bg: rgb(239, 239, 239);
+  --dot-color: rgb(184, 184, 184);
+  --dot-size: 2px;
+  --dot-space: 22px;
+	background:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
+}
+.box{
+  min-height: calc(100%-460px);
+  overflow-y: auto;
+}
+
+.light{
+  --color-primary: #4f46e5;
+  --color-secondary: #fbbf24;
+  --color-background: #f3f4f6;
+  --color-text: #111827;
+}
+
+.dark{
+  --color-primary: #4f46e5;
+  --color-secondary: #fbbf24;
+  --color-background: #111827;
+  --color-text: #f3f4f6;
+}
+
+
+
+
+.loader {
+  display: flex;
+  align-items: center;
+
+  
+}
+
+.bar {
+  display: inline-block;
+  width: 4px;
+  height: 30px;
+  background-color: rgba(109, 109, 109, 0.616);
+  border-radius: 10px;
+  animation: scale-up4 1s linear infinite;
+}
+
+.bar:nth-child(2) { 
+  height: 35px;
+  margin: 0 5px;
+  animation-delay: .25s;
+}
+
+.bar:nth-child(3) {
+  animation-delay: .5s;
+}
+
+@keyframes scale-up4 {
+  20% {
+    background-color: #727272;
+    transform: scaleY(1.5);
+  }
+
+  40% {
+    transform: scaleY(1);
+  }
+}
