@@ -10,6 +10,7 @@ import { useIsloggedIn } from './hooks/useIsLoggedIn.js'
 
 
 function App() {
+
   const {isLoggedIn} = useIsloggedIn();
   useEffect(()=>{
     isLoggedIn()
@@ -17,7 +18,7 @@ function App() {
 
     const [ai, setAI] = useState<Model>('gemini');
     const [isLoading, setIsLoading] = useState<boolean>(false)
-  //  const {generate} = useAI(ai);
+   const {generate} = useAI(ai);
 
   const [messages, setMessages] = useState<Message[]>([])
 
