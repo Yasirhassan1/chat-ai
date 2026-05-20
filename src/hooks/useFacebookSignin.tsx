@@ -11,8 +11,8 @@ const auth = getAuth(app);
         async function signInWithFacebook(){
                try{
                   const result =  await signInWithPopup(auth, provider)
-                  const credential = FacebookAuthProvider.credentialFromResult(result)
-                  const token = credential?.accessToken;
+                //   const credential = FacebookAuthProvider.credentialFromResult(result)
+                //   const token = credential?.accessToken;
                   const user = result.user;
                   console.log(user)
                   window.location.href="/"
