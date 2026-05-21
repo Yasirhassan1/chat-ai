@@ -6,17 +6,14 @@ export function useSignOut(navigate:string=""){
     async function logOut(){
         try{
            await signOut(auth);
+           localStorage.removeItem("isloggedIn");
            window.location.href = navigate
         }
         catch(error){
             console.log(error)
         }
-// signOut(auth).then(() => {
+        
 
-// }).catch((error) => {
-//     console.log(error)
-  
-// });
     }
 
     return {logOut}

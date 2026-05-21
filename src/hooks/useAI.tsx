@@ -14,7 +14,7 @@ export function useAI(model: Model) {
     const { generateWithGemini } = useGemini();
     const { generateWithGrok } = useGrok();
     const { generateWithGPT } = useGPT();
-    const { generateWithClaude } = useCluade()
+    const { generateWithClaude } = useCluade();
 
     const chooseModel = {
         "gemini": async (prompt: string): Promise<responseType> => {
@@ -55,6 +55,19 @@ export function useAI(model: Model) {
             }
             return res;
         },
+        "thinkPro": async (prompt: string): Promise<responseType>=>{
+            const geminiRes = String(await generateWithGemini(prompt));
+            const gptRes = String(await generateWithGPT(geminiRes));
+            const grokRes = String(await generateWithGrok(gptRes))
+            const claudeRes = String(await generateWithClaude(grokRes))
+            const geminiLastRes = String(await generateWithGemini(claudeRes))
+            const result = {
+                text: geminiLastRes,
+                model: "thinkPro"
+
+            }
+            return result;
+        }
 
     }
 

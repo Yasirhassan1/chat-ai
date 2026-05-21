@@ -17,6 +17,7 @@ body{
   --dot-color: rgb(184, 184, 184);
   --dot-size: 2px;
   --dot-space: 22px;
+
 	background:
 		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
 		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
@@ -79,4 +80,24 @@ body{
   40% {
     transform: scaleY(1);
   }
+}
+
+
+
+::-webkit-scrollbar {
+  width: 5px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #c5c5c5;
+  border-radius: 10px;
+  
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8e8e8e;
+    border-radius: 10px;
 }

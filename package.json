@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@ai-sdk/xai": "^3.0.91",
+    "@elevenlabs/elevenlabs-js": "^2.49.1",
     "@google/genai": "^2.3.0",
     "@tailwindcss/vite": "^4.3.0",
     "ai": "^6.0.184",
+    "dotenv": "^17.4.2",
     "firebase": "^12.13.0",
     "openai": "^6.38.0",
     "react": "^19.2.6",

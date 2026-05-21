@@ -8,7 +8,9 @@ export function useIsloggedIn(){
 function isLoggedIn(){
   onAuthStateChanged(auth, (user)=>{
   if(!user){
+    
     window.location.href = "/sign-up"
+    
   }
 })
 

@@ -14,8 +14,11 @@ export function useGoogleSignin(){
            const result =  await signInWithPopup(auth, provider)
         //    const credential = GoogleAuthProvider.credentialFromResult(result)
         //    const token = credential?.accessToken;
-           const user = result.user;
-           console.log(user)
+           const id = result.user.uid;
+           localStorage.setItem("userId", id)
+
+           
+           localStorage.setItem("isloggedIn", "true")
            window.location.href="/"
         }
         catch(error){
