@@ -6,8 +6,10 @@ export function useEmailAndPassword(){
    
     async function signInWithEmailAndPassword(email:string, password:string){
          try{
-    const userCredentail = await createUserWithEmailAndPassword(auth, email, password)
-     const user = userCredentail.user;  
+     await createUserWithEmailAndPassword(auth, email, password)
+
+    // const userCredentail = await createUserWithEmailAndPassword(auth, email, password)
+    //  const user = userCredentail.user;  
      localStorage.setItem("isloggedIn", "true")
      return true;
  
