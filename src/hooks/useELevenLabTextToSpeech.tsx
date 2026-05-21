@@ -15,11 +15,9 @@ const audio = await elevenlabs.textToSpeech.convert(
 		outputFormat: "mp3_44100_128",
 	},
 );
-console.log(audio)
 
 
-
-// await play(audio);
+await play(audio);
  }
 
  return {textToSpeech}
